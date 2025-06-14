@@ -1,3 +1,39 @@
+<!-- Your exact PB Tech HTML template goes here -->
+<!-- Replace dynamic values with {{variableName}} placeholders -->
+<!-- Example: -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- ... rest of head ... -->
+    <title>PB Tech</title>
+</head>
+<body>
+    <!-- ... header content ... -->
+    
+    <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">Hi {{customerName}},</p>
+    <p style="font-size:16px;color:#404041;margin-bottom:0px;margin-top:0px;">
+        Thank you for your order #: 
+        <a style="text-decoration:underline;color:#1278A5;" href="#">
+            <b style="color:#1578A5;text-decoration:underline;">{{orderNumber}}</b>
+        </a>
+    </p>
+    
+    <!-- Delivery Address -->
+    <p style="font-size:16px;color:#404041;margin:0;">
+        {{deliveryAddress}}
+    </p>
+    
+    <!-- Product Details -->
+    <p class="hide_for_mobile" style="font-size:14px;margin:0;">
+        <a style="text-decoration:underline;color:#1278A5;" href="#">
+            <b>{{productName}}</b>
+        </a>
+    </p>
+    
+    <!-- ... rest of your template with similar replacements ... -->
+</body>
+</html>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -242,10 +278,10 @@
 <div
     style="margin:0 auto !important; max-width:800px; min-width:200px;background:#F5F7FA;font-size:14px;color:#404041;padding:15px;box-sizing:border-box;">
         <p id="title" style="font-size:35px;margin:20px 0px 30px 0px;color:#404041;">Order Confirmation</p>
-        <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">Hi luke,</p>
+        <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">Hi {{customerName}},</p>
         <p style="font-size:16px;color:#404041;margin-bottom:0px;margin-top:0px;">Thank you for your order #: <a
             style="text-decoration:underline;color:#1278A5;" href="https://www.pbtech.co.nz/my-account/orders/8254360"><b
-                style="color:#1578A5;text-decoration:underline;">WO8254360</b></a>, we hope you enjoyed
+                style="color:#1578A5;text-decoration:underline;">{{orderNumber}}</b></a>, we hope you enjoyed
         shopping with PB Tech.</p>
             <br />
         <br>
@@ -258,13 +294,13 @@
             <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">Delivery
                 Address</p>
                             <p style="font-size:16px;color:#404041;margin:0;">
-                    Luke Schatz<br />
+                    {{customerName}}<br />
 <br />
-80 View Road<br />
-Mount Eden<br />
-Auckland<br />
-1024<br />
-New Zealand                </p>
+{{deliveryAddress}}<br />
+<br />
+<br />
+<br />
+                </p>
             
         </div>
         <!--[if mso]>
@@ -275,7 +311,7 @@ New Zealand                </p>
             <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">Estimated Shipping                 Date</p>
                             <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">
                     <b>
-                        Monday 30 December 2024                    </b>
+                        {{shippingDate}}                    </b>
                 </p>
             
                             <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;"><b>Service: </b>Standard Delivery</p>
@@ -300,9 +336,7 @@ New Zealand                </p>
                 <td style="height:14px;max-height:14px;padding:15px 15px 0px 15px;text-align:left;color:#8497B0;width:100%;"
                     colspan="2">
                     <p class="hide_for_mobile" style="font-size:14px;margin:0;"><a style="text-decoration:underline;color:#1278A5;"
-                            href="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1"><b>Xiaomi Mi Home S101 Electric Shaver - Dual-track 18-blade design for a f...</b></a></p>
-                    <p class="show_for_mobile" style="font-size:14px;margin:0;display:none;"><a style="text-decoration:underline;color:#1278A5;"
-                            href="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1"><b>Xiaomi Mi Home S101 Electric Sh...</b></a></p>
+                            href="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1"><b>{{productName}}</b></a></p>
                 </td>
             </tr>
             <tr>
@@ -321,7 +355,7 @@ New Zealand                </p>
                     </a>
                 </td>
                 <td style="text-align:right;padding:0px 15px 15px 0px;vertical-align:bottom">
-                    <span style="font-size:23px;color:#404041;">$36.44</span>
+                    <span style="font-size:23px;color:#404041;">${{productPrice}}</span>
                     <span style="font-size: 20px;color:#404041;">&nbsp;</span>
                 </td>
             </tr>
@@ -333,7 +367,7 @@ New Zealand                </p>
                     style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:15px 15px 0px 0px;width:90%;color:#404041;">
                     Delivery:</td>
                 <td style="font-size:14px;text-align:left;color:#404041;padding:15px 15px 0px 0px;">
-                    <b>$6.82</b></td>
+                    <b>${{deliveryCost}}</b></td>
             </tr>
                         <tr>
                 <td
@@ -341,14 +375,6 @@ New Zealand                </p>
                     Surcharge:</td>
                 <td style="font-size:14px;text-align:left;color:#404041;padding-right:15px;">
                     <b>$0.43</b></td>
-            </tr>
-                        <tr>
-                <td
-                    style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:0px 15px 0px 0px;width:90%;color:#404041;">
-                    Sub Total:</td>
-                <td style="font-size:14px;text-align:left;color:#404041;padding-right:15px;">
-                    <b>$43.69</b></td>
-            </tr>
             <tr>
                 <td
                     style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:0px 15px 0px 0px;width:90%;color:#404041;">
@@ -359,7 +385,7 @@ New Zealand                </p>
             <tr>
                 <td colspan="2"
                     style="height:23px;max-height:23px;font-size:23px;padding:15px 15px 0px 0px;text-align:right;color:#404041;">
-                    <b>Total:&nbsp;$50.24</b></td>
+                    <b>Total:&nbsp;${{totalAmount}}</b></td>
             </tr>
                         <tr>
                 <td
