@@ -51,12 +51,12 @@ app.post('/send-email', async (req, res) => {
 
     // Email options
     const mailOptions = {
-      from: `"PB Tech" <${process.env.GMAIL_USER}>`,
+      from: `"PB Tech Web Sales" <${process.env.GMAIL_USER}>`,
       to: toEmail,
-      subject: `Order Confirmation - ${orderData.orderNumber}`,
+      subject: `Order Confirmation for Order ${orderData.orderNumber}`,
       html: emailHTML,
       headers: {
-        'X-Mailer': 'PB Tech Order System'
+        'X-Mailer': 'PB Tech Web Sales'
       }
     };
 
