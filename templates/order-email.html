@@ -1,35 +1,518 @@
-<!-- Your exact PB Tech HTML template goes here -->
-<!-- Replace dynamic values with {{variableName}} placeholders -->
-<!-- Example: -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <!-- ... rest of head ... -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>PB Tech</title>
+    <style type="text/css">
+
+    html, body { font-family:calibri,arial,sans-serif;min-width:200px; min-height:100%; padding:0; Margin:0 auto; background:#fff; }
+        a img { border:none; }
+        .ReadMsgBody { width:100%; }
+        .ExternalClass { width:100%; }
+        .ExternalClass * { line-height:100%; }
+        table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+        #title {
+            font-size: 5em !important;
+            line-height: normal !important;
+            white-space: nowrap !important;
+        }
+        #wish-title {
+            font-size: 4em !important;
+            line-height: normal !important;
+            white-space: nowrap !important;
+        }
+        #review-title {
+            font-size: 3em !important;
+            line-height: normal !important;
+        }
+        .sub-headings {
+            font-size: 2em !important;
+        }
+        .iag-heading {
+            font-size: 3em !important;
+        }
+        .padding-left {
+            padding-left: 15px;
+        }
+        a .default_link {
+            text-decoration: none !important;
+            color:inherit !important;
+        }
+        a:hover {
+            cursor: pointer !important;
+        }
+        .confetti {
+            display:block;
+            width: 800px !important;
+            max-width: 100% !important;
+        }
+        .email-buttons {
+            display:block;
+            width: 320px !important;
+            max-width: 100% !important;
+        }
+
+        .banner-image {
+            display: block;
+            width: 800px !important;
+            max-width: 100% !important;
+        }
+        .email-buttons {
+            display:block;
+            width: 320px !important;
+            max-width: 100% !important;
+        }
+
+        @media only screen and (max-width: 650px) {
+            #title {
+                font-size: 10vw !important;
+            }
+            #wish-title {
+                font-size: 10vw !important;
+            }
+            #personal_info_container {
+                margin-bottom: 0px !important;
+            }
+            #authorisation_title {
+                font-size: 9vw !important;
+            }
+            #logo {
+                width: 75px !important;
+            }
+
+            .shrink_image {
+                height: 40px !important;
+            }
+            .sub-headings {
+                font-size: 7vw !important;
+            }
+            .iag-heading {
+                margin-bottom: 20px !important;
+            }
+            .status_check {
+                width: 100% !important;
+            }
+            .personal_info {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+                padding-left: 0px !important;
+            }
+            .hide_for_mobile {
+                display: none !important;
+            }
+
+            .margin_mobile {
+                margin-right: 15px !important;
+            }
+            .show_for_mobile {
+                display: block !important;
+            }
+
+        }
+
+        @media only screen and (max-width: 430px) {
+            #title {
+                font-size: 9vw !important;
+            }
+            #wish-title {
+                font-size: 9vw !important;
+            }
+            #review-title {
+                font-size: 8vw !important;
+            }
+            .email-buttons {
+                width: 100% !important;
+            }
+
+            .width-100 {
+                width: 100% !important;
+            }
+        }
+
+
+    </style>
+    <!--[if !mso]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
 </head>
-<body>
-    <!-- ... header content ... -->
-    
-    <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">Hi {{customerName}},</p>
-    <p style="font-size:16px;color:#404041;margin-bottom:0px;margin-top:0px;">
-        Thank you for your order #: 
-        <a style="text-decoration:underline;color:#1278A5;" href="#">
-            <b style="color:#1578A5;text-decoration:underline;">{{orderNumber}}</b>
-        </a>
-    </p>
-    
-    <!-- Delivery Address -->
-    <p style="font-size:16px;color:#404041;margin:0;">
-        {{deliveryAddress}}
-    </p>
-    
-    <!-- Product Details -->
-    <p class="hide_for_mobile" style="font-size:14px;margin:0;">
-        <a style="text-decoration:underline;color:#1278A5;" href="#">
-            <b>{{productName}}</b>
-        </a>
-    </p>
-    
-    <!-- ... rest of your template with similar replacements ... -->
+<body style="margin: 0;padding: 0;min-width: 100% !important;font-family:calibri,arial,sans-serif;">
+
+    <div style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+            </div>
+
+    <!-- full width back ground -->
+    <table width="100%" bgcolor="#FFF" border="0" cellpadding="0" cellspacing="0" align="center" style="height:100%;">
+        <tr>
+            <td style="padding-top:20px; padding-bottom:20px;">
+                <!-- email content wrapper -->
+                <table class="content" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:800px;font-family:Arial,sans-serif;max-height:72px;">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:800px;min-width:200px;">
+                                <tr>
+                                    <td width="100%">
+                                        <!--[if mso]>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="800" align="center" bgcolor="#0D4F77" style="width:800px;font-size:14px;box-sizing:border-box"><tr><td style="padding:15px;">
+                                        <![endif]-->
+                                        <div style="Margin:0 auto;max-width:800px;min-width:200px;background:#0D4F77;font-size:14px;color:#404041;box-sizing:border-box!important;padding:15px;">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif;color:#FFF;">
+                                                <tr>
+                                                    <!-- logo -->
+                                                    <td width="20%" align="left">
+                                                        <a href="https://www.pbtech.co.nz" style="color:#FFF;">
+                                                            <img src="https://www.pbtech.co.nz/imglib/logo/logo_pbtech_full_colour_blue_transparent_650x128.png" width="208" style="width:100%;display: block;max-width:208px !important;" alt="PB Tech -- https://www.pbtech.co.nz">
+                                                        </a>
+                                                    </td>
+                                                    <td width="70%" align="right">
+                                                        <table align="right" cellpadding="0" cellspacing="0" border="0" style="color:#FFF;font-family:Arial,sans-serif;">
+                                                            <tr>
+                                                                <!-- contact us -->
+                                                                <td align="right" style="color:#FFF;font-size:12px;vertical-align:middle;text-decoration:none !important;">
+                                                                    <a class="default_link" href="https://www.pbtech.co.nz/contact" style="text-decoration:none !important;color:#FFF;font-size:12px;">Contact us</a>
+                                                                </td>
+                                                            </tr>
+
+                                                                                                                                <tr>
+                                                                    <!-- locate a store -->
+                                                                    <td align="right" style="color: #FFF; font-size: 12px;text-decoration:none !important;">
+                                                                        <a class="default_link" href="https://www.pbtech.co.nz/stores" style="text-decoration:none !important;color:#FFF;font-size:12px;">Locate a store</a>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td></tr></table>
+                                        <![endif]-->
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- email custom content -->
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:800px;min-width:200px;">
+                                <tr>
+                                    <td width="100%">
+                                        <!-- main content -->
+                                        <div itemscope itemtype="http://schema.org/Order">
+    <div itemprop="merchant" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="PB Tech" />
+    </div>
+    <link itemprop="orderStatus" href="http://schema.org/OrderProcessing" />
+    <meta itemprop="orderNumber" content="WO8254360" />
+    <div itemprop="priceSpecification" itemscope itemtype="http://schema.org/PriceSpecification">
+        <meta itemprop="priceCurrency"
+            content="NZD" />
+        <meta itemprop="price" content="50.24" />
+    </div>
+    <meta itemprop="priceCurrency" content="NZD" />
+    <meta itemprop="price" content="50.24" />
+    <div itemprop="acceptedOffer" itemscope itemtype="http://schema.org/Offer">
+                <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
+            <meta itemprop="name" content="Xiaomi Mi Home S101 Electric Shaver - Dual-track 18-blade design for a faster, cleaner and more reliable shave" />
+            <meta itemprop="sku" content="HOMMIX19321" />
+            <meta itemprop="url" content="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1" />
+            <meta itemprop="image" content="https://www.pbtech.co.nz/imgprod/H/O/HOMMIX19321.jpg" />
+        </div>
+        <meta itemprop="price" content="42.33" />
+        <meta itemprop="priceCurrency"
+            content="NZD" />
+        <div itemprop="eligibleQuantity" itemscope itemtype="http://schema.org/QuantitativeValue">
+            <meta itemprop="value" content="1" />
+        </div>
+            </div>
+    <link itemprop="url" href="https://www.pbtech.co.nz/my-account/orders/8254360" />
+    <div itemprop="potentialAction" itemscope itemtype="http://schema.org/ViewAction">
+        <link itemprop="url" href="https://www.pbtech.co.nz/my-account/orders/8254360" />
+    </div>
+</div>
+<!-- main content -->
+<!--[if mso]>
+<table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#F5F7FA" width="800" style="min-width:200px;max-width:800px !important;font-size:14px;"><tr><td style="padding:15px;color:#404041;">
+<![endif]-->
+<div
+    style="margin:0 auto !important; max-width:800px; min-width:200px;background:#F5F7FA;font-size:14px;color:#404041;padding:15px;box-sizing:border-box;">
+        <p id="title" style="font-size:35px;margin:20px 0px 30px 0px;color:#404041;">Order Confirmation</p>
+        <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">Hi luke,</p>
+        <p style="font-size:16px;color:#404041;margin-bottom:0px;margin-top:0px;">Thank you for your order #: <a
+            style="text-decoration:underline;color:#1278A5;" href="https://www.pbtech.co.nz/my-account/orders/8254360"><b
+                style="color:#1578A5;text-decoration:underline;">WO8254360</b></a>, we hope you enjoyed
+        shopping with PB Tech.</p>
+            <br />
+        <br>
+    <div id="personal_info_container" style="text-align:left;background:#F5F7FA;">
+        <!--[if mso]>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" background="#F5F7FA" style="width:100%;"><tr><td style="width:34%;vertical-align:top;">
+        <![endif]-->
+                <div class="personal_info"
+            style="display:inline-block;font-size:14px;text-align:left;width:34%;min-width:120px;max-width:100%;width:-webkit-calc(230400px - 48000%);min-width:-webkit-calc(34%);width:calc(230400px - 48000%);min-width:calc(34%);">
+            <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">Delivery
+                Address</p>
+                            <p style="font-size:16px;color:#404041;margin:0;">
+                    Luke Schatz<br />
+<br />
+80 View Road<br />
+Mount Eden<br />
+Auckland<br />
+1024<br />
+New Zealand                </p>
+            
+        </div>
+        <!--[if mso]>
+            </td><td style="width:65%;vertical-align:top;padding-left:15px;">
+            <![endif]-->
+        <div class="personal_info padding-left"
+            style="display:inline-block;font-size:14px;text-align:left;width:65%;min-width:120px;max-width:100%;width:-webkit-calc(230400px - 48000%);min-width:-webkit-calc(65%);width:calc(230400px - 48000%);min-width:calc(65%);vertical-align:top;box-sizing:border-box;">
+            <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">Estimated Shipping                 Date</p>
+                            <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">
+                    <b>
+                        Monday 30 December 2024                    </b>
+                </p>
+            
+                            <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;"><b>Service: </b>Standard Delivery</p>
+                                            </div>
+                <!--[if mso]>
+        </td></tr></table>
+        <![endif]-->
+    </div>
+    <br />
+    <br />
+    <div style="text-align:left; font-size:14px; background:#F5F7FA;">
+        <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">Your Order Details</p>
+        <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">
+            Order #:
+            <b>
+                <a style="text-decoration:underline;color:#1278A5;"
+                    href="https://www.pbtech.co.nz/my-account/orders/8254360">WO8254360</a>
+            </b>
+        </p>
+                <table cellspacing="0" style="width:100%;border:1px solid #E2E3DE;background-color:#FFFFFF;">
+            <tr>
+                <td style="height:14px;max-height:14px;padding:15px 15px 0px 15px;text-align:left;color:#8497B0;width:100%;"
+                    colspan="2">
+                    <p class="hide_for_mobile" style="font-size:14px;margin:0;"><a style="text-decoration:underline;color:#1278A5;"
+                            href="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1"><b>Xiaomi Mi Home S101 Electric Shaver - Dual-track 18-blade design for a f...</b></a></p>
+                    <p class="show_for_mobile" style="font-size:14px;margin:0;display:none;"><a style="text-decoration:underline;color:#1278A5;"
+                            href="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1"><b>Xiaomi Mi Home S101 Electric Sh...</b></a></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:14px;max-height:14px;font-size:14px;padding:0px 15px;text-align:left;color:#8497B0;"
+                    colspan="2">Quantity: 1</td>
+            </tr>
+            <tr>
+                <td style="height:14px;max-height:14px;font-size:14px;padding:0px 15px;text-align:left;color:#8497B0;"
+                    colspan="2">Part #: HOMMIX19321</td>
+            </tr>
+
+                        <tr>
+                <td style="padding:15px;text-align:left;">
+                    <a href="https://www.pbtech.co.nz/product/HOMMIX19321/Xiaomi-Mi-Home-S101-Electric-Shaver---Dual-track-1">
+                        <img src="https://www.pbtech.co.nz/thumbs/H/O/HOMMIX19321.jpg.jpg?h=1789206995" border="0" width="100">
+                    </a>
+                </td>
+                <td style="text-align:right;padding:0px 15px 15px 0px;vertical-align:bottom">
+                    <span style="font-size:23px;color:#404041;">$36.44</span>
+                    <span style="font-size: 20px;color:#404041;">&nbsp;</span>
+                </td>
+            </tr>
+        </table>
+                        <table cellspacing="0"
+            style="border-bottom:1px solid #404041;border-top:1px solid #404041;width:100%;background-color:#EAEEF8;">
+            <tr>
+                <td
+                    style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:15px 15px 0px 0px;width:90%;color:#404041;">
+                    Delivery:</td>
+                <td style="font-size:14px;text-align:left;color:#404041;padding:15px 15px 0px 0px;">
+                    <b>$6.82</b></td>
+            </tr>
+                        <tr>
+                <td
+                    style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:0px 15px 0px 0px;width:90%;color:#404041;">
+                    Surcharge:</td>
+                <td style="font-size:14px;text-align:left;color:#404041;padding-right:15px;">
+                    <b>$0.43</b></td>
+            </tr>
+                        <tr>
+                <td
+                    style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:0px 15px 0px 0px;width:90%;color:#404041;">
+                    Sub Total:</td>
+                <td style="font-size:14px;text-align:left;color:#404041;padding-right:15px;">
+                    <b>$43.69</b></td>
+            </tr>
+            <tr>
+                <td
+                    style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:0px 15px 0px 0px;width:90%;color:#404041;">
+                    GST:</td>
+                <td style="font-size:14px;text-align:left;color:#404041;padding-right:15px;">
+                    <b>$6.55</b></td>
+            </tr>
+            <tr>
+                <td colspan="2"
+                    style="height:23px;max-height:23px;font-size:23px;padding:15px 15px 0px 0px;text-align:right;color:#404041;">
+                    <b>Total:&nbsp;$50.24</b></td>
+            </tr>
+                        <tr>
+                <td
+                    style="height:14px;max-height:14px;font-size:14px;text-align:right;padding:0px 15px 0px 0px;width:90%;color:#404041;">
+                    Paid:</td>
+                <td style="font-size:14px;text-align:left;color:#404041;padding-right:15px;">
+                    <b>$50.24</b></td>
+            </tr>
+                                    <tr>
+                <td colspan="2"
+                    style="height:14px;max-height:14px;font-size:14px;padding:0px 15px 15px 0px;text-align:right;color:#404041;">
+                    Payment Method:&nbsp;Visa / Mastercard (+ 1%)                </td>
+            </tr>
+        </table>
+        <div style="text-align:left;font-size:14px;color:#404041;">
+                        <p style="font-size:16px;color:#404041;margin-top:10px;"><b>Please note</b>, payment will be taken from your
+                card or account within 48 hours.</p>
+                        <br>
+                        <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">What's Next?
+            </p>
+                        <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">You will receive another email
+                once the goods are ready to be shipped with the tracking number and courier information.</p>
+                        <p style="font-size:16px;color:#404041;margin-bottom:20px;margin-top:0px;">If you have an account (i.e. you
+                didn't checkout as a guest), you can view the <a style="text-decoration:underline;color:#1278A5;"
+                    href="https://www.pbtech.co.nz/my-account/orders"><b>orders page</b></a> on our website
+                to check the status of your order.</p>
+                        <p class="sub-headings" style="font-size:25px;color:#404041;margin-bottom:15px;margin-top:0px;">Need Help?
+            </p>
+            <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">If you have any queries regarding
+                your order, please feel free to <a style="text-decoration:underline;color:#1278A5;"
+                    href="https://www.pbtech.co.nz/contact"><b>contact us</b></a>.</p>
+            <p style="font-size:16px;color:#404041;margin-bottom:10px;margin-top:0px;">Thanks again for shopping at
+                PB Tech</p>
+            <p style="font-size:16px;color:#404041;margin-bottom:20px;margin-top:0px;">Kind regards,</p>
+            <p style='margin-bottom:0px;'><b>PB Tech Web Sales</b><br>Phone: <a href="tel:+64 (09) 571-8338" style="text-decoration:underline;color:#1278A5;">+64 9 571 8338</a><br>Email: <a style='text-decoration:underline;color:#1278A5;' href='mailto:websales@pbtech.co.nz'> websales@pbtech.co.nz</a><br></p>
+        </div>
+    </div>
+
+        
+            <!--[if mso]>
+
+            <tr>
+            <td style="padding:0px;margin-top:15px;">
+            <![endif]-->
+            <div style="margin:0 auto; max-width:800px; min-width:200px;background:#F5F7FA;font-size:14px;color:#404041;padding:0px;box-sizing:border-box;margin-top:15px;">
+                <a href="https://www.pbtech.co.nz/app-detect">
+                    <img class="banner-image" width="100%"  src="https://www.pbtech.co.nz/imglib/emails/AppBanner_Email.jpg" alt="Pbtech Phone App Link Image" style="width:100%;max-width:800px;"/>
+                </a>
+            </div>
+            <!--[if mso]>
+            </td></tr>
+
+            <![endif]-->
+        </div>
+<!--[if mso]>
+</td></tr></table>
+<![endif]-->
+
+                                    </td>
+                                </tr>
+                                                                    <!-- survey -->
+                                    <tr>
+                                        <td style="width:100%;">
+                                            <!--[if mso]>
+                                            <table border="0" cellpadding="0" cellspacing="0" align="center" width="800" style="min-width:200px;max-width:800px !important;font-size:14px;"><tr><td style="color:#404041;">
+                                            <![endif]-->
+                                            <div style="margin:0 auto !important;max-width:800px;min-width:200px;font-size:14px;color:#404041;">
+                                                <table width="100%" bgcolor="#FFF4D5" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:800px;min-width:200px;margin-top:0px !important;">
+                                                    <tr>
+                                                        <td style="text-align:center;font-size:14px;padding:10px 15px;"><strong>Tell us what you think!</strong> Help us make PB Tech a better place to shop by <a style="text-decoration:underline;color:#1278A5;" href="https://www.research.net/r/HP2HGPK?Var1=1955763">giving us your feedback</a></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!--[if mso]>
+                                            </td></tr></table>
+                                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                                                <!-- email footer -->
+                                <!-- social icons -->
+                                <tr>
+                                    <td style="width:100%;">
+                                        <!--[if mso]>
+                                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="800" style="min-width:200px;max-width:800px !important;font-size:14px;box-sizing:border-box"><tr><td style="background-color: #0D4F77">
+                                        <![endif]-->
+                                        <div style="Margin:0 auto; max-width:800px; min-width:200px;font-size:14px;color:#404041;box-sizing:border-box;">
+                                            <table width="100%" bgcolor="#0D4F77" border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:800px !important;min-width:200px;">
+                                                <tr>
+                                                    <!-- social icons -->
+                                                    <td style="background-color:#0D4F77; padding:10px 5px; width:30%; min-width:200px !important;">
+                                                        <table width="100%" style="max-width:250px !important;" align="left" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td style="padding:5px;max-width:26px !important;">
+                                                                    <a href="https://www.tiktok.com/@pbtechnz" style="display:block;">
+                                                                        <img src="https://www.pbtech.co.nz/imglib/emails/email_footer_tiktok.png" alt="Follow us on TikTok" style="display: block;width:100%;max-width:38px !important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td style="padding:5px;max-width:26px !important;">
+                                                                    <a href="https://www.facebook.com/PBTechnologies" style="display:block;">
+                                                                        <img src="https://www.pbtech.co.nz/imglib/emails/email_footer_facebook.png" alt="Follow us on Facebook" style="display: block;width:100%;max-width:38px !important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td style="padding:5px;max-width:26px !important;">
+                                                                    <a href="https://www.youtube.com/channel/UCccuOf10kjRScSr-GbZatKQ" style="display:block;">
+                                                                        <img src="https://www.pbtech.co.nz/imglib/emails/email_footer_youtube.png" alt="Follow us on Youtube" style="display: block;width:100%;max-width:38px !important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td style="padding:5px;max-width:26px !important;">
+                                                                    <a href="https://twitter.com/pbtechnz" style="display:block;">
+                                                                        <img src="https://www.pbtech.co.nz/imglib/emails/email_footer_x.png" alt="Follow us on X" style="display: block;width:100%;max-width:38px !important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td style="padding:5px;max-width:26px !important;">
+                                                                    <a href="https://nz.linkedin.com/company/pb-technologies" style="display:block;">
+                                                                        <img src="https://www.pbtech.co.nz/imglib/emails/email_footer_linkedin.png" alt="Follow us on LinkedIn" style="display: block;width:100%;max-width:38px !important;">
+                                                                    </a>
+                                                                </td>
+                                                                <td style="padding:5px;max-width:26px !important;">
+                                                                    <a href="https://www.instagram.com/pbtechnz/" style="display: block;">
+                                                                        <img src="https://www.pbtech.co.nz/imglib/emails/email_footer_instagram.png" alt="Follow us on Instagram" style="display: block;width:100%;max-width:38px !important;">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <!-- about PB Tech -->
+                                                    <td align="right" style="padding-right:10px;text-decoration:none !important;color:#FFF !important;font-size:12px;">
+                                                        <a class="default_link" href="https://www.pbtech.co.nz/about" style="text-decoration: inherit !important;color:#FFF !important;font-size:12px;"><strong style="color: #FFF; font-weight: normal;">About us</strong></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td></tr></table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p style="font-size:12px;text-align:center;">This email was sent to
+                                                                            <a style="text-decoration:underline;color:#1278A5; padding-right:2px;display:inline-block;" href="mailto:lukeschatz123@gmail.com" >lukeschatz123@gmail.com</a>
+                                                                    </p>
+                            <p style='font-size:11px; text-align:center;'>Copyright &#169; PB Tech 2024 All rights reserved.<br>587 Great South Road, Manukau, Auckland, New Zealand</p>                            <p style='font-size:11px; text-align:center;'>PB Tech is not responsible for typographical errors. Excluding genuine mistakes, prices were accurate at the time this email was sent. All price and specifications are subject to change without notice.<br />
+</p>                        </td>
+                    </tr>
+                </table>
+                <!-- end of email content wrapper -->
+            </td>
+        </tr>
+    </table>
+    <!-- end of email back ground -->
 </body>
 </html>
