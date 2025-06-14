@@ -1,0 +1,96 @@
+body {
+    font-family: 'Calibri', Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #404041;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #0D4F77;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #F5F7FA;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #E2E3DE;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #0D4F77;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1278A5;
+}
+
+button:disabled {
+    background-color: #8497B0;
+    cursor: not-allowed;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#statusMessage {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.status-pending {
+    background-color: #FFF4D5;
+    color: #404041;
+}
+
+.status-success {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.status-error {
+    background-color: #FFEBEE;
+    color: #C62828;
+}
